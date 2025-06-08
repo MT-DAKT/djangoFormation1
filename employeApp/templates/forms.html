@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<body>
+    <div class="container1">
+        <form action="{{ action }}" method="POST">
+            {% csrf_token %}
+            <label for="first">First Name</label><br><br>
+            <input type="text" name="first" id="first" value="{{member.firstname}}"><br><br>
+            <label for="last">Last Name</label><br><br>
+            <input type="text" name="last" id="last" value="{{member.lastname}}"><br><br>
+            <label for="country">Country</label><br><br>
+            <input type="text" name="country" id="country" value="{{member.country}}"><br><br>
+            <button type="submit" id="new">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

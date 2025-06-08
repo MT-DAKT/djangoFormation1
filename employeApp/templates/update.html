@@ -1,0 +1,3 @@
+{% url "uprec" member.id as action_url %}
+<h1>Update Member</h1>
+<div>{% include 'forms.html' with action=action_url member=member %}</div>
